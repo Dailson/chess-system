@@ -3,7 +3,7 @@
  */
 package application;
 
-import boardLayer.Board;
+import board.Board;
 
 /**
  * @author dailson

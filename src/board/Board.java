@@ -1,7 +1,7 @@
 /**
  * 
  */
-package boardLayer;
+package board;
 
 /**
  * @author dailson
@@ -51,4 +51,24 @@ public class Board {
 		return columns;
 	}
 	
+	/**
+	 * @param row
+	 * @param column
+	 * @return piece
+	 */
+	public Piece piece(int row, int column) {
+		return this.pieces[row][column];
+	}
+	
+	/**
+	 * @param position
+	 * @return piece
+	 */
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
+	
+	public void placePiece(Piece piece, Position position) {
+		
+	}
 }
