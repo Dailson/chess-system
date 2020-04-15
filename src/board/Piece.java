@@ -1,7 +1,7 @@
 /**
  * 
  */
-package boardLayer;
+package board;
 
 /**
  * @author dailson
