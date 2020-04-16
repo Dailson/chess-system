@@ -61,7 +61,7 @@ public class Board {
 	 * @return piece on position
 	 * @throws BoardException
 	 */
-	public Piece piece(Position position){
+	public Piece piece(Position position) {
 		if (!positionExists(position)) {
 			throw new BoardException("Position not on the board");
 		}
@@ -73,7 +73,7 @@ public class Board {
 	 * @param position
 	 * @throws BoardException
 	 */
-	public void placePiece(Piece piece, Position position){
+	public void placePiece(Piece piece, Position position) {
 		if (thereIsAPiece(position)) {
 			throw new BoardException("There is already a piece on position " + position);
 		}
@@ -103,9 +103,9 @@ public class Board {
 	 * @return true or false
 	 * @throws BoardException
 	 */
-	public boolean thereIsAPiece(Position position){
-//		if (thereIsAPiece(position)) {
-//			throw new BoardException("There is a piece on position");
+	public boolean thereIsAPiece(Position position) {
+//		if (!positionExists(position)) {
+//			throw new BoardException("Position not on the board");
 //		}
 		return piece(position) != null;
 	}
