@@ -37,30 +37,40 @@ public class UI {
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+	// https://stackoverflow.com/questions/2979383/java-clear-the-console
+	public static void clearScreen() {
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
+	}
+	
+	/**
+	 * @param sc
+	 * @return
+	 */
 	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
-
 			String read = sc.nextLine();
 			char column = read.charAt(0);
 			int row = Integer.parseInt(read.substring(1));
 
 			return new ChessPosition(column, row);
+		
 		} catch (RuntimeException e) {
 			throw new InputMismatchException("Erro reading ChessPosition. Valid values are from a1 to h8");
 		}
-
 	}
 	
 	
 
+	/**
+	 * @param pieces
+	 */
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i = 0; i < pieces.length; i++) {
 			System.out.print((8 - i) + " ");
 
 			for (int j = 0; j < pieces.length; j++) {
-
 				printPiece(pieces[i][j]);
-
 			}
 
 			System.out.println();
@@ -69,6 +79,9 @@ public class UI {
 
 	}
 
+	/**
+	 * @param piece
+	 */
 	private static void printPiece(ChessPiece piece) {
 		if (piece == null) {
 			System.out.print("-");
