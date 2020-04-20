@@ -27,4 +27,9 @@ public class Rook extends ChessPiece{
 		return "R";
 	}
 
+	@Override
+	public boolean[][] possibleMovies() {
+		boolean[][] mat = new boolean[super.getBoard().getRows()][super.getBoard().getColumns()];
+		return mat;
+	}
 }
