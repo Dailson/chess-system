@@ -29,7 +29,7 @@ public class King extends ChessPiece{
 
 
 	@Override
-	public boolean[][] possibleMovies() {
+	public boolean[][] possibleMoves() {
 		boolean[][] mat = new boolean[super.getBoard().getRows()][super.getBoard().getColumns()];
 		return mat;
 	}
