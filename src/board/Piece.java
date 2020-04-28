@@ -12,6 +12,9 @@ public abstract class Piece {
 	private Board board;
 	
 	
+	/**
+	 * @param board
+	 */
 	public Piece(Board board) {
 		this.board = board;
 	}
@@ -32,9 +35,10 @@ public abstract class Piece {
 		return this.position;
 	}
 	
+	/**
+	 * Abstract method
+	 */
 	public abstract boolean[][] possibleMoves();
-
-	
 	
 	/**
 	 * HookMethod
