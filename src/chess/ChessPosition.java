@@ -40,9 +40,11 @@ public class ChessPosition {
 
 	@Override
 	public String toString() {
-		StringBuilder strBuilder = new StringBuilder();
-		strBuilder.append(column).append(row);
+		//StringBuilder strBuilder = new StringBuilder();
+		//strBuilder.append(column).append(row);
 		
-		return strBuilder.toString();
+		return "" + column + row;
+		
+		//return strBuilder.toString();
 	}
 }
