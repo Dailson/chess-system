@@ -46,7 +46,7 @@ public abstract class Piece {
 	 * @param position
 	 * @return
 	 */
-	public boolean possibleMovie(Position position) {
+	public boolean possibleMove(Position position) {
 		return possibleMoves()[position.getRow()][position.getColumn()];
 	}
 	
@@ -54,7 +54,7 @@ public abstract class Piece {
 	 * Implementação concreta que depende de um método abstrato
 	 * @return
 	 */
-	public boolean isTheereAnyPossibleMove() {
+	public boolean isThereAnyPossibleMove() {
 		boolean[][] mat = possibleMoves();
 		for(int i = 0; i < mat.length;i++) {
 			for(int j = 0; j < mat.length; j++) {
